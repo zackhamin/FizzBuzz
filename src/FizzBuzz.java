@@ -7,19 +7,16 @@ public class FizzBuzz {
         System.out.print("Number: ");
         int inputNumber = scanner.nextInt();
 
-        switch (inputNumber) {
-            case inputNumber % 3 == 0 && inputNumber % 5 == 0:
-                System.out.println("Fizzbuzz");
-                break;
-            case inputNumber % 3 == 0:
-                System.out.println("Fizz");
-                break;
-            case inputNumber % 5 == 0:
-                System.out.println("Buzz");
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + inputNumber);
+        if (inputNumber %3 == 0 && inputNumber % 5 == 0) {
+            System.out.println("Fizzbuzz");
         }
+        else if (inputNumber % 3 == 0) {
+            System.out.println("Fizz");
+        }
+        else if (inputNumber % 5 == 0) {
+            System.out.println("Buzz");
+        } else
+            System.out.println(inputNumber);
         }
     }
 
